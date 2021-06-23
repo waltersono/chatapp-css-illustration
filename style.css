@@ -1,0 +1,408 @@
+@import "animation.css";
+/* BASE */
+:root {
+    --color-primary-1: hsl(276, 100%, 81%);
+    --color-primary-2: hsl(276, 55%, 52%);
+    --color-primary-3: hsl(271, 15%, 43%);
+    --color-primary-4: hsl(206, 6%, 79%);
+    --color-primary-5: hsl(271, 36%, 24%);
+    --color-primary-6: hsl(270, 7%, 64%);
+
+    --color-secondary-1: hsl(0, 0%, 100%);
+    --color-secondary-2: hsl(270, 20%, 96%);
+    --color-secondary-3: hsl(271, 36%, 24%);
+    --color-secondary-4: hsl(289, 100%, 72%);
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: "Rubik", sans-serif;
+    background-color: var(--color-secondary-1);
+    position: relative;
+}
+
+/* ============================= */
+
+/* BACKGROUND ITEMS */
+
+.bg--1 {
+    width: 20rem;
+    height: 90vh;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    background-image: linear-gradient(to bottom, var(--color-secondary-4), var(--color-secondary-3));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg--2 {
+    width: 20rem;
+    height: 90vh;
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+    background-color: var(--color-secondary-2);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* ============================= */
+
+/* LAYOUT */
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    max-width: 70rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* =========================== */
+
+.text-box {
+    width: 50%;
+    margin-left: 5rem;
+}
+
+.h1 {
+    color: var(--color-primary-5);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.paragraph {
+    color: var(--color-primary-6);
+    line-height: 1.5;
+    font-size: 1.6rem;
+}
+
+/* MOBILE COMPONENT */
+.mobile {
+    border: 10px solid #fff;
+    background-color: #fff;
+    width: 22rem;
+    height: 42rem;
+    border-radius: 2.5rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.mobile__topbar {
+    background-image: linear-gradient(to left, var(--color-secondary-4), var(--color-primary-2));
+    height: 5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.mobile__sound-gap {
+    background-color: #fff;
+    height: 2rem;
+    width: 60%;
+    margin: 0 auto;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.topbar__items {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 1rem;
+    width: 100%;
+}
+
+.topbar__back,
+.topbar__menu {
+    width: 0.5rem;
+    height: 0.5rem;
+    fill: #fff;
+}
+
+.topbar__menu {
+    margin-left: auto;
+}
+
+.topbar__user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0.5rem;
+}
+
+.user__photo {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 0.15rem solid #fff;
+}
+
+.user__info {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+
+.user__name {
+    font-weight: 700;
+}
+
+.mobile__content {
+    background-color: var(--color-secondary-2);
+    height: 100%;
+    padding: 1rem;
+}
+
+.mobile__chat {
+    font-size: 0.6rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 70%;
+    margin-bottom: 0.5rem;
+}
+
+.mobile__chat--left {
+    border-bottom-left-radius: 0;
+    background-color: rgba(252, 167, 255, 0.2);
+    color: var(--color-primary-2);
+}
+
+.mobile__chat--right {
+    border-bottom-right-radius: 0;
+    background-color: #fff;
+    float: right;
+    width: auto;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.mobile__chat--price {
+    color: #fff;
+    background-image: linear-gradient(to right, var(--color-secondary-4), var(--color-primary-2));
+    display: flex;
+    align-items: center;
+    width: 80%;
+    border-bottom-left-radius: 0;
+}
+
+.mobile__chat-image {
+    display: flex;
+    float: right;
+    margin-bottom: 1rem;
+}
+
+.mobile__chat-image img {
+    border-radius: 1rem;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.5rem;
+}
+
+.radio {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 0.1rem solid var(--color-primary-4);
+    background-color: transparent;
+}
+
+.duration {
+    margin-left: 1rem;
+    opacity: 0.6;
+}
+
+.price {
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.form__group {
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form__input {
+    border: none;
+    margin-right: auto;
+    flex: 1;
+    color: var(--color-secondary-3);
+}
+
+.form__input::placeholder {
+    color: var(--color-primary-4);
+}
+
+.form__input:focus {
+    outline: none;
+}
+
+.form__btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.form__btn svg {
+    width: 2rem;
+    height: 2rem;
+    fill: #fff;
+    background-color: var(--color-secondary-3);
+    border-radius: 50%;
+}
+
+/* ANIMATIONS */
+
+.mobile__chat--1 {
+    animation: moveInTop 0.75s ease-out 1s;
+    animation-fill-mode: backwards;
+}
+
+.mobile__chat--2 {
+    animation: moveInTop 0.75s ease-out 1.5s;
+    animation-fill-mode: backwards;
+}
+
+.mobile__chat--3 {
+    animation: moveInTop 0.75s ease-out 2s;
+    animation-fill-mode: backwards;
+}
+
+.mobile__chat--4 {
+    animation: moveInTop 0.75s ease-out 2.5s;
+    animation-fill-mode: backwards;
+}
+
+.mobile__chat--5 {
+    animation: moveInTop 0.75s ease-out 3s;
+    animation-fill-mode: backwards;
+}
+
+.mobile__chat--6 {
+    animation: moveInTop 0.75s ease-out 3.5s;
+    animation-fill-mode: backwards;
+}
+
+.mobile__chat--7 {
+    animation: moveInTop 0.75s ease-out 4s;
+    animation-fill-mode: backwards;
+}
+
+.mobile__chat--8 {
+    animation: moveInTop 0.75s ease-out 4.5s;
+    animation-fill-mode: backwards;
+}
+
+.mobile__chat--9 {
+    animation: moveInTop 0.75s ease-out 5s;
+    animation-fill-mode: backwards;
+}
+
+.mobile__chat--10 {
+    animation: moveInTop 0.75s ease-out 5.5s;
+    animation-fill-mode: backwards;
+}
+
+.form__group--animated {
+    animation: pulsate 1s infinite 6s;
+}
+
+.h1--animated {
+    animation: moveInRight 1s ease-out 7s;
+    animation-fill-mode: backwards;
+}
+
+.paragraph--animated {
+    animation: moveInRight 1s ease-out 8s;
+    animation-fill-mode: backwards;
+}
+
+/* ==================================================== */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1100px) {
+    .container {
+        width: 100%;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .mobile {
+        flex: 0 0 auto;
+    }
+
+    .text-box {
+        text-align: center;
+        flex: 0 1 auto;
+        margin: 0;
+        width: 90%;
+    }
+
+    .bg--1 {
+        height: 50vh;
+    }
+
+    .bg--2 {
+        display: none;
+    }
+
+    .h1--animated {
+        animation: moveInBottom 1s ease-out 7s;
+        animation-fill-mode: backwards;
+    }
+
+    .paragraph--animated {
+        animation: moveInBottom 1s ease-out 8s;
+        animation-fill-mode: backwards;
+    }
+}
