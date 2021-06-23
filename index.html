@@ -1,51 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
   <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <div class="bg--1"></div>
+  <div class="bg--2"></div>
 
-  Samuel Green
-  Available to Walk
+  <div class="container">
+    <div class="content">
 
-  That sounds great. I’d be happy with that.
+      <div class="mobile">
+        <div class="mobile__topbar">
+          <div class="mobile__sound-gap"></div>
 
-  Could you send over some pictures of your dog, please?
+          <div class="topbar__items">
+            <svg class="topbar__back">
+              <use xlink:href="images/sprites.svg#icon-chevron-thin-left"></use>
+            </svg>
+            <div class="topbar__user">
+              <img src="images/avatar.jpg" alt="User photo" class="user__photo">
+              <div class="user__info">
+                <span class="user__name">Samuel Green</span>
+                <div class="user__status">Available to Walk</div>
+              </div>
+            </div>
+            <svg class="topbar__menu">
+              <use xlink:href="images/sprites.svg#icon-dots-three-vertical"></use>
+            </svg>
+          </div>
+        </div>
 
-  Here are a few pictures. She’s a happy girl!
+        <div class="mobile__content">
+          <div class="mobile__chat mobile__chat--left mobile__chat--1">
+            That sounds great. I’d be happy with that.
+          </div>
+          <div class="mobile__chat mobile__chat--left mobile__chat--2">
+            Could you send over some pictures of your dog, please?
+          </div>
 
-  Can you make it?
+          <div class="mobile__chat-image">
+            <img src="images/dog-image-1.jpg" alt="Dog" class="mobile__chat--3">
+            <img src="images/dog-image-2.jpg" alt="Dog" class="mobile__chat--4">
+            <img src="images/dog-image-3.jpg" alt="Dog" class="mobile__chat--5">
+          </div>
 
-  She looks so happy! The time we discussed works. How long shall I take her out for?
+          <div class="mobile__chat mobile__chat--right mobile__chat--6">
+            Here are a few pictures. She’s a happy girl!
+          </div>
+          <div class="mobile__chat mobile__chat--right mobile__chat--7">
+            Can you make it?
+          </div>
+          <div class="clearfix"></div>
 
-  30 minute walk
-  $29
+          <div class="mobile__chat mobile__chat--left mobile__chat--8">
+            She looks so happy! The time we discussed works. How long shall I take her out for?
+          </div>
 
-  1 hour walk
-  $49
 
-  Type a message…
+          <div class="mobile__chat mobile__chat--price mobile__chat--9">
+            <span class="radio">
+            </span>
+            <span class="duration">
+              30 minute walk
+            </span>
+            <span class="price">
+              $29
+            </span>
+          </div>
+          <div class="mobile__chat mobile__chat--price mobile__chat--10">
+            <span class="radio">
+            </span>
+            <span class="duration">
+              1 hour walk
+            </span>
+            <span class="price">
+              $49
+            </span>
+          </div>
 
-  Simple booking
+          <form action="#" class="form">
+            <div class="form__group form__group--animated">
+              <input type="text" class="form__input" placeholder="Type a message...">
+              <button class="form__btn">
+                <svg>
+                  <use xlink:href="images/sprites.svg#icon-chevron-with-circle-right"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="text-box">
+        <h1 class="h1 h1--animated">Simple booking</h1>
+        <p class="paragraph paragraph--animated">
+          Stay in touch with our dog walkers through the chat interface. This makes it easy to
+          discuss arrangements and make bookings. Once the walk has been completed you can rate
+          your walker and book again all through the chat.
+        </p>
+      </div>
+    </div>
+    <div class="hide">
+    </div>
+  </div>
 
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://linkedin.com/in/waltersono">Walter Sono</a>.
   </div>
 </body>
+
 </html>
