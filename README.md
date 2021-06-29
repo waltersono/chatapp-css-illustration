@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Source](https://github.com/waltersono/chatapp-css-illustration)
-- Live Site URL: [Live](https://waltersono.github.io/chatapp-css-illustration/)
+- Solution URL: [Source code](https://github.com/waltersono/chatapp-css-illustration)
+- Live Site URL: [Live project](https://waltersono.github.io/chatapp-css-illustration/)
 
 ## My process
 
